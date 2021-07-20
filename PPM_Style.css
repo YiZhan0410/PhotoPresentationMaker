@@ -1,0 +1,212 @@
+/* Grid design for interface */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "menu header header header"
+      "menu content content content"
+      "menu footer footer footer";
+  }
+
+  /* Menu section */
+.menu {
+    grid-area: menu;
+    display: block;
+    border-style: solid;
+    width: 200px;
+    height: 720px;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+  /* Image size display from the server */
+.menu img{
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    padding-top: 20px;
+    padding-left: -20px;
+    margin-left: -10px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+  /* Image transparency when the pointer moves */
+.menu img:hover{
+    opacity: 1;
+}
+
+  /* Properties while image is dragged */
+.draggable
+{
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
+
+  /* Choose file design */
+#file{
+    margin-top: -10px;
+    font-size:10px;
+    margin-left: -10px;
+}
+
+  /* Submit button design */
+#submit{
+    margin-top: -10px;
+    font-size: 10px;
+    margin-left: -10px;
+}
+
+  /* Instruction import image design */
+#lImage{
+    margin-top: -10px;
+    margin-left:-10px;
+    color:white;
+}
+  
+  /* Header section */
+.header{
+    grid-area: header;
+    display: block;
+    border-style: solid;
+    width: 99%;
+    height: 60px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-left: -25px;
+}
+
+  /* Previous and next arrow design */
+.prev, .next{
+    cursor: pointer;
+    float: left;
+    width: auto;
+    padding: 25px;
+    margin-top: -25px;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+    /* Play, pause , full screen buttons design */
+#play, #pause, #fullscreen{
+    margin-top: 10px;
+    margin-right: 15px;
+    float: right;
+    background-color:lightblue;
+    opacity: 0.7;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+  /* Icon design for the buttons */
+i.fas{
+    font-family: fontawesome !important;
+    font-style: normal;
+}
+  
+  /* Content section */
+.content{
+    grid-area: content;
+    display: block;
+    border-style: solid;
+    width: 99%;
+    height: 450px;
+    border-radius: 20px;
+    margin: 10px;
+    margin-top: -185px;
+    margin-left: -25px;
+}
+
+  /* Display image by clicking or image array */
+#mySlide img{
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    object-fit: cover;
+}
+
+  /* Footer section */
+.footer{
+    grid-area: footer;
+    display: block;
+    border-style: solid;
+    width: 99%;
+    height: 190px;
+    border-radius: 20px;
+    margin: 10px;
+    margin-top: -1.5px;
+    margin-left: -25px;
+    overflow: auto; /* Prevent elements over the border and enable to view by scrolling */
+}
+
+  /* Arrange container design */
+#arrange {
+    position: relative;
+    padding: 5px;
+    margin-top: -12px;
+    min-height: 140px;
+    width: auto;
+    white-space: nowrap; /*important to forced it as single line (Resource: https://www.designcise.com/web/tutorial/how-to-force-html-elements-to-stay-on-the-same-line )*/ 
+    overflow-x: auto;
+    overflow-y: hidden;
+    }
+  /* Image in the arrange container design */
+#arrange img {
+    opacity: 0.8; 
+    cursor: pointer; 
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 4px;
+    } 
+  
+  /* Image transparency in the arrange container when the pointer moves*/ 
+#arrange img:hover {
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Image shadow when image is selected */
+#arrange img:active{
+    background-color: #717171;
+}
+
+  /* Properties while image dropped in arrange container */
+.dropped{
+    position: static !important;
+}
+  
+  /* Drop-down list design */
+#transition{
+    margin-top: 5px;
+    margin-left: 15px;
+    background-color: transparent;
+    border: 1px solid black;
+    text-emphasis-color: white;
+}
+  
+  /* Label for transition design */
+#transition_title{
+    margin-left: 15px;
+    margin-top: 5px;
+    color: white;
+}
+  
